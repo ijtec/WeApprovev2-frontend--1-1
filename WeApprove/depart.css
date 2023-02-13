@@ -1,0 +1,62 @@
+.contain{
+    padding: 20px;
+    height: 250px;
+    width: 500px;
+    margin-left: 400px;
+    margin-top: 200px;
+    border: 2px solid #7070701D ;
+    position: relative;
+    background-color: #FFFFFF;
+  }
+
+  #container{
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 0px;
+    width: 531px;
+    padding: 5px;
+    left: 0px;
+    color: #A5A5A5;
+  }
+
+  p{
+    margin-top: 90px;
+    margin-left: 30px;
+    color:#A5A5A5;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  input[type=text] {
+    padding: 12px;
+    border: 2px solid ;
+    font-weight: bold;
+    width: 400px;
+    height: 29px;
+    border-radius: 5px;
+    position: absolute;
+    left: 50px;
+    top: 150px;
+    color:#A5A5A53C ;
+  }
+
+  ::placeholder{
+    color: #A5A5A53C;
+  }
+
+  button{
+    position: absolute;
+    bottom: 10px;
+    width: 150px;
+    height: 30px;
+    background-color: #D7B321;
+    border-color: #9F810A;
+    left: 170px;
+    top: 220px;
+    border:1px;
+  }
+
+  .fa-circle-xmark{
+  position: absolute;
+  top: 20px;
+  right: 5px;
+}

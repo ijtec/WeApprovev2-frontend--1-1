@@ -1,0 +1,97 @@
+body{
+    background-color: #00000057;
+  }  
+
+.title{
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 0px;
+    width: 430px;
+    padding: 5px;
+    left: 0px;
+    color: #A5A5A5;
+  }
+
+  .form{
+    padding: 20px;
+    height: 350px;
+    width: 400px;
+    margin-left: 400px;
+    margin-top: 200px;
+    border: 2px solid #7070701D ;
+    position: relative;
+    background-color: #FFFFFF;
+  }
+
+  .subtitle{
+    position: absolute;
+    bottom: 193px;
+    left: 50px;
+    color:#A5A5A5;
+    font-family: 'Roboto', sans-serif; 
+  }
+
+  .sub{
+    position: absolute;
+    top: 60px;
+    left: 50px;
+    color:#A5A5A5;
+    font-family:'Roboto', sans-serif; 
+  }
+
+  .placeholder{
+    position: absolute;
+    bottom: 190px;
+    left: 221px;
+    color:#A5A5A5;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  button{
+    position: absolute;
+    bottom: 30px;
+    width: 150px;
+    height: 30px;
+    background-color: #D7B321;
+    border-color: #9F810A;
+    left: 135px;
+    border:1px;
+    color:#FFFFFF;
+    }
+
+    input[type=text] {
+        position: absolute;
+        left: 50px;
+        top: 100px;
+        width: 330px;
+        height: 30px;
+        border-radius: 5px;
+        border-color:#A5A5A53C;
+        
+      }
+      input[type=cv] {
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+       border-color:#A5A5A53C ;
+        position: absolute;
+        left: 221px;
+        top: 212px;
+      }
+
+      input[type=dte] {
+        position: absolute;
+        left: 50px;
+        top: 212px; 
+        width: 150px;
+        height: 30px;
+        border-radius: 5px;
+        border-color:#A5A5A53C;
+        
+      }
+
+      .fa-circle-xmark{
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
