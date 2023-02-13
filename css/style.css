@@ -1,0 +1,141 @@
+/* 
+@tailwind base;
+@tailwind components;
+@tailwind utilities; */
+*{
+    margin: 0;
+    padding: 0;
+}
+.vw1{
+    font-size: 1;
+}
+.vw1-6{
+    font-size: 1.6;
+}
+.vw2{
+    font-size: 2;
+}
+.vw3{
+    font-size: 3vw;
+}
+.vw1-3,.vw1-25{
+    font-size: 1.3vw;
+}
+.vw1-9{
+    font-size: 1.9vw;
+}
+.vw3-4{
+    font-size: 3.4vw;
+}
+.vw2-5{
+    font-size: 2.5vw;
+}
+.vw2-75{
+    font-size: 2.75vw;
+}
+.vw2-25{
+    font-size: 2.25vw;
+}
+.vw2-8{
+    font-size: 2.8vw;
+}
+.vw3-8{
+    font-size: 3.8vw;
+}
+.vw4-4{
+    font-size: 4.4vw;
+}
+.w-70{
+    width: 70%;
+}
+.bg-#F8F8F8{
+    background-color:#F8F8F8
+}
+.color-#F8F8F8{
+    color:#F8F8F8
+}
+.border-#7070701D{
+    border-color: #7070701D;
+}
+ /* .pagination > li > a, .pagination > li > span{background-color:red} */
+ .pagination>li.active>a,
+ .pagination>li.active>span {
+     background-color: transparent;
+     color: #D40E1F;
+ }
+
+ .pagination .page-item a.page-link {
+     border: none;
+ }
+
+ tr {
+     background-color: #D40E1F0D !important;
+     color: #D40E1F;
+     font-size: 1.1vw;
+     font-weight: medium;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 3%;
+     width: 100%;
+ }
+
+ .td {
+     background-color: white !important;
+     color: #8E8E8E;
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     padding: 0 3%;
+     width: 100%;
+     border-bottom: 2px solid #7070701D;
+     font-size: 1.1vw;
+
+ }
+
+ .sn {
+     width: 5%;
+     border: none;
+ }
+
+ .r1-col {
+     width: 20%;
+     border: none;
+ }
+
+ .r2-col {
+     width: 20%;
+     border: none;
+ }
+
+ .r3-col {
+     width: 20%;
+     border: none;
+ }
+
+ .r4-col {
+     width: 7%;
+     border: none;
+     text-align: center;
+ }
+
+ select {
+     color: #8E8E8E;
+     height: 100%;
+ }
+
+ #example_info,
+ #example_paginate {
+     text-align: center;
+     color: #8E8E8E;
+ }
+
+ .paginate_button>a {
+     /* background-color: #D40E1F0D!important; */
+     border: none;
+     color: #8E8E8E;
+ }
+
+ .paginate_button>a>.active {
+     color: #D40E1F;
+ }
