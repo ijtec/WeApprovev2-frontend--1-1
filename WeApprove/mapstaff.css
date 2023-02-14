@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body{
+  background-color: #00000057;
+}
+
+
+.contain{
+    padding: 20px;
+    height: 500px;
+    width: 300px;
+    margin-left: 470px;
+    margin-top: 88px;
+    border: 2px solid #7070701D ;
+    position: relative;
+    background-color: #FFFFFF;
+  }
+
+  #container{
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 0px;
+    width: 332px;
+    padding: 4px;
+    left: 0px;
+    color: #A5A5A5;
+  }
+
+  img{
+    height: 39px ;
+    position: relative;
+    border-radius: 20px;
+    width: 39px;
+  }
+
+  button{
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    background-color: #D7B321;
+    border-color: #9F810A;
+    left: 90px;
+    top: 465px;
+    border:1px;
+    color:#FFFFFF;
+    }
+
+    h2{
+      color: #A5A5A5;
+      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      margin-left: 50px;
+      margin-top: -40px;
+    }
+
+    input[type=text] {
+      position: absolute;
+      left: 15px;
+      top: 73px;
+      width: 300px;
+      height: 30px;
+      border-radius: 5px;
+      border-color:#A5A5A53C;
+    }
+
+    .ma{
+      padding: 1px;
+      border: none;
+      margin-top: 110px;
+      height: 40px;
+      
+    }
+
+    .ma2{
+      padding: 1px;
+      border: none;
+      margin-top: 10px;
+      height: 40px;
+      
+    }
+    
+    .ma3{
+      padding: 1px;
+      border:none;
+      margin-top: 10px;
+      height: 40px;
+    }
+
+    .ma4{
+      padding: 2px;
+      border:none;
+      margin-top: 10px;
+      height: 40px;
+    }
+
+    p{
+      font-family: 'Roboto', sans-serif;
+    }
+
+    h6{
+      color:#A5A5A53C ;
+      font-family: 'Roboto', sans-serif;
+      margin-left: 50px;
+      margin-top: -13px;
+    }
+
+    .fa-circle-xmark{
+      position: absolute;
+      top: 20px;
+      right: 5px;
+    }
+
+    ::placeholder{
+      color: #A5A5A53C;
+    }
+
+     /* .fa-magnifying-glass{
+      position: absolute;
+      bottom: -100px;
+    } */
+  

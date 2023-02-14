@@ -1,0 +1,101 @@
+body{
+  background-color:#00000057 ;
+}
+
+
+button{
+  position: absolute;
+  bottom: 30px;
+  width: 150px;
+  height: 30px;
+  background-color: #D7B321;
+  border-color: #9F810A;
+  left: 135px;
+  border:1px;
+  color:#FFFFFF;
+  }
+
+  .title{
+    background-color: #F5F5F5;
+    position: absolute;
+    top: 0px;
+    width: 430px;
+    padding: 5px;
+    left: 0px;
+    color: #A5A5A5;
+  }
+
+  .form{
+    padding: 20px;
+    height: 350px;
+    width: 400px;
+    margin-left: 400px;
+    margin-top: 200px;
+    border: 2px solid #7070701D ;
+    position: relative;
+    background-color: #FFFFFF;
+  }
+  .subtitle{
+    margin-top: 40px;
+    margin-left: 30px;
+    color:#A5A5A5;
+    font-family: 'Roboto', sans-serif; 
+  }
+  
+  .placeholder{
+    position: absolute;
+    bottom: 232px;
+    left: 50px;
+    color:#A5A5A5;
+    font-family: 'Roboto', sans-serif;
+  }
+
+  input[type=text] {
+    position: absolute;
+    left: 50px;
+    top: 90px;
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border-color:#A5A5A53C;
+    
+  }
+  input[type=email] {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+   border-color:#A5A5A53C ;
+    position: absolute;
+    left: 50px;
+    top: 170px;
+  }
+
+  ::placeholder{
+    color:#A5A5A5;
+    font-family: 'Roboto', sans-serif;
+    margin: 20px; 
+    
+  }
+   input[type=department] {
+    width: 300px;
+    height: 30px;
+    border-radius: 5px;
+    border-color:#A5A5A53C ;
+    position: absolute;
+    bottom: 100px;
+    left: 50px;
+  }
+
+  .sub{
+      position: absolute;
+      top: 224px;
+      left: 50px;
+      color:#A5A5A5;
+      font-family: 'Roboto', sans-serif; 
+    }
+
+    .fa-circle-xmark{
+      position: absolute;
+      top: 6px;
+      right: 5px;
+}
