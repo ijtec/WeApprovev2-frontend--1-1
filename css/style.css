@@ -94,30 +94,38 @@
  }
 
  .sn {
-     width: 5%;
-     border: none;
- }
+    width: 15%;
+    border: none;
+}
 
- .r1-col {
-     width: 20%;
-     border: none;
- }
+.r1-col {
+    width: 30%;
+    border: none;
+}
 
- .r2-col {
-     width: 20%;
-     border: none;
- }
+.r2-col {
+    width: 30%;
+    border: none;
+}
 
- .r3-col {
-     width: 20%;
-     border: none;
- }
+.r3-col {
+    width: 30%;
+    border: none;
+}
 
- .r4-col {
-     width: 7%;
-     border: none;
-     text-align: center;
- }
+.r4-col {
+    width: 30%;
+    border: none;
+    text-align: center;
+}
+.r5-col {
+   width: 35.5%;
+   border: none;
+}
+.r6-col {
+   width: 15%;
+   border: none;
+}
 
  select {
      color: #8E8E8E;
