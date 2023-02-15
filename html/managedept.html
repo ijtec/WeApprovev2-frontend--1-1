@@ -91,7 +91,7 @@
             <div class="d-flex align-items-center justify-content-between bg-white px-2 font-weight-bold font-inter text-1.4vw" style="height: 3vw ;padding-top: 0.5vw;">
                 <p class="vw1 d-flex justify-content-center align-items-center " style="height: 100%;color: #D40E1F;font-weight: bold;margin-top: 1vw;">Manage Department</p>
                 <div class="d-flex align-items-center">
-                    <button id="uploadStaff" class="btn  py-2 px-4 text-1vw" style="color: #707070;">
+                    <button id="addDeptModalOpen"  class="btn  py-2 px-4 text-1vw" style="color: #707070;" >
                         <i class="fa-solid fa-plus"></i> Add Department
                     </button>
                 </div>
@@ -122,6 +122,36 @@
     </tbody>
 </table>
 <!-- add department modal -->
+<div class="newdepartmentModalcontainer" id="newDeptModalcontainer">
+        <div class="newdepartmentform">
+            <div class="newdepartmentmodaltittlediv" >
+                <h1 class="newdepartmentmodaltitle">Add New Department</h1>
+                <i class="fa-solid fa-circle-xmark newdepartmentdropdowncanclebtn" id="addDeptClose"></i>
+            </div>
+            <div class="newdepartmentmodalinputsdiv">
+                <div class="nameDiv">
+                    <h1 class="newdepartmentmodallabel">Department Name</h1>
+                    <input type="text" placeholder="Enter the name of the Department" class="newdepartmentmodalinputs" />
+                </div>
+                <div class="deptcodeDiv">
+                    <h1 class="newdepartmentmodallabel">Department Code Name</h1>
+                    <input type="department" placeholder="Enter Code Name" class="newdepartmentmodalinputs" />
+                </div>
+                <div class="refnumberdiv">
+                    <h1  class="newdepartmentmodallabel">Department REF Number</h1>
+                    <input type="email" placeholder=" Enter REF Number" class="newdepartmentmodalinputs" />
+                </div>
+                <div>
+                    <h1 class="newdepartmentmodallabel">Department SEQ Number</h1>
+                    <input type="email" placeholder=" Enter SEQ Number" class="newdepartmentmodalinputs" />
+                </div>
+            </div>
+            <button class="newdepartmentmodaladdstaffbtn">
+                <h1>Add</h1>
+            </button>
+        </div>
+    </div>
+    </div>
 </div>
 
 
@@ -134,6 +164,7 @@
         <script src=" https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
         <script src=" https://cdn.datatables.net/1.13.2/js/dataTables.bootstrap5.min.js"></script>  
         <script src="../js/layout.js"></script>
+        <script src="../js/manageDept.js"></script>
 </body>
 </html>
 <script>

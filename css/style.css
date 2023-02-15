@@ -420,7 +420,7 @@
 
 /* add new department modal */
 .newdepartmentModalcontainer{
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -612,7 +612,7 @@
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  background-color:#00000057 ;
+  background-color:rgba(0, 0, 0, 0.5) ;
   width: 100vw;
   height:100vh ;
   position: fixed;

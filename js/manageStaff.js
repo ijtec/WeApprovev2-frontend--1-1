@@ -1,5 +1,5 @@
 const newstaffmodaldropdownToggle = document.querySelector(
-  ".newstaffmodaldropdown-toggle"
+  "#newstaffmodaldropdown-toggle"
 );
 const newstaffmodaldropdownMenu = document.querySelector(
   ".newstaffmodaldropdown-menu"
@@ -59,3 +59,5 @@ document
 document
   .getElementById("addStaffbtn")
   .addEventListener("click", toggleAddStaffModal);
+
+
