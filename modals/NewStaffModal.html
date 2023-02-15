@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="newStaffModalcontainer" id="newStaffModalcontainer">
+        <div class="newStaffform">
+            <div class="newstaffmodaltittlediv">
+                <h1 class="newstaffmodaltitle">Add New Staff</h1>
+                <i class="fa-solid fa-circle-xmark newstaffdropdowncanclebtn" id="newStaffModalClose"></i>
+            </div>
+            <div class="newstaffmodalinputsdiv">
+                <div class="nameDiv">
+                    <h1 class="newstaffmodallabel">Full Name</h1>
+                    <input type="text" placeholder="Enter the name of staff" class="newstaffmodalinputs" />
+                </div>
+                <div class="deptDiv">
+                    <h1 class="newstaffmodallabel">Department</h1>
+                    <input type="department" placeholder="Enter department of staff" class="newstaffmodalinputs" />
+                </div>
+                <div class="emaildiv">
+                    <h1 for="email" class="newstaffmodallabel">Email</h1>
+                    <input type="email" placeholder=" Enter email of staff " class="newstaffmodalinputs" />
+                </div>
+                <div class="newstaffmodalstatusDiv">
+                    <h1 class="newstaffmodallabel">Status</h1>
+                    <div class="newstaffmodaldropdown">
+                        <div
+                            class="visiblenewstaffmodaldropdown flex px-1 items-center justify-between w-full h-[3.1vw] border-[1px] border-[#EAAC2980] border-solid">
+                            <h1 class="newstaffmodalstatus">inactive</h1>
+                            <!-- <span class="newstaffmodaldropdown-toggle " style="background-color: transparent !important;"></span> -->
+                            <i class="newstaffmodaldropdown-toggle fa-solid fa-caret-down border-none "></i>
+                        </div>
+
+                        <div class="newstaffmodaldropdown-menu">
+                            <a class="newstaffmodaldropdown-item" data-value="1">
+                                <h1 class="newstaffmodaloptions">active</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="newstaffmodaladdstaffbtn">
+                <h1>Add</h1>
+            </button>
+        </div>
+    </div>
+    </div>
+    <script src="https://kit.fontawesome.com/1e252d778c.js" crossorigin="anonymous"></script>
+</body>
+
+</html>
