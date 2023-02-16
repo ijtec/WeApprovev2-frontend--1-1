@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/register.css">
+    <link rel="stylesheet" href="../css/style.css">
     <title>Onboarding</title>
 </head>
 
@@ -67,8 +68,8 @@
                                     <div class="confirm-password">
                                         <label for="confirm-password" class="pass">Confirm Password</label>
                                         <div class="confirm">
-                                            <input class="password-input" type="text" placeholder="***********" required>
-                                            <img src="../assets/Icon feather-eye.png" class="eye">
+                                            <input class="password-input" type="text" placeholder="" required>
+                                            <!-- <img src="../assets/Icon feather-eye.png" class="eye"> -->
                                         </div>
                                         
                                     </div>
@@ -77,11 +78,10 @@
                         </div>
                         <div class="departments">
                             <label for="departments" class="departments">Choose your departments </label>
-                            <div class="add-departments">
-                                <a href="#" class="dept">+.Add Departments</a>
-                            </div>
+                            <span class="add-departments" id="addNewDeptbtn" style="cursor: pointer;">
+                                +.Add Departments
+                            </span>
                         </div>
-
                         <div class="checkboxes">
                             <div class="finance-row">
                                 <input type="checkbox" class="finance-checkbox" id="hs-checkbox-group-1">
@@ -140,11 +140,6 @@
                                 Register
                             </button>
 
-                            <!-- <p class="text-sm text-[#a9a9a9] font-semibold mt-2 pt-1 mb-0">
-                                Interested in Trial version?
-                                <a href="#!"
-                                    class="text-red-600 hover:text-red-700 focus:text-red-700 transition duration-200 ease-in-out">Click
-                                    here</a> -->
                         </div>
 
                     </form>
@@ -152,7 +147,57 @@
             </div>
 
         </div>
+       
     </section>
+     <!-- add new department -->
+            <div class="newdepartmentModalcontainer" id="newdepartmentModalcontainer"  >
+        <div class="newdepartmentform">
+            <div class="newdepartmentmodaltittlediv">
+                <h1 class="newdepartmentmodaltitle">Add New Department</h1>
+                <i class="fa-solid fa-circle-xmark newdepartmentdropdowncanclebtn" id="newStaffModalClose"></i>
+            </div>
+            <div class="newdepartmentmodalinputsdiv">
+                <div class="nameDiv">
+                    <h1 class="newdepartmentmodallabel">Department Name</h1>
+                    <input type="text" placeholder="Enter the name of the Department" class="newdepartmentmodalinputs" />
+                </div>
+                <div class="deptcodeDiv">
+                    <h1 class="newdepartmentmodallabel">Department Code Name</h1>
+                    <input type="department" placeholder="Enter Code Name" class="newdepartmentmodalinputs" />
+                </div>
+                <div class="refnumberdiv">
+                    <h1  class="newdepartmentmodallabel">Department REF Number</h1>
+                    <input type="email" placeholder=" Enter REF Number" class="newdepartmentmodalinputs" />
+                </div>
+                <div>
+                    <h1 class="newdepartmentmodallabel">Department SEQ Number</h1>
+                    <input type="email" placeholder=" Enter SEQ Number" class="newdepartmentmodalinputs" />
+                </div>
+            </div>
+            <button class="newdepartmentmodaladdstaffbtn">
+                <h1>Add</h1>
+            </button>
+        </div>
+    </div>
+    </div>
+    <script >
+        function toggleNewDeptModal() {
+            console.log("toggled");
+            if (
+                document.getElementById("newdepartmentModalcontainer").style.display === "none"
+            ) {
+                document.getElementById("newdepartmentModalcontainer").style.display = "flex";
+            } else {
+                document.getElementById("newdepartmentModalcontainer").style.display = "none";
+            }
+            }
+            document
+            .getElementById("newStaffModalClose")
+            .addEventListener("click", toggleNewDeptModal);
+            document
+            .getElementById("addNewDeptbtn")
+            .addEventListener("click", toggleNewDeptModal);
+    </script>
 </body>
 
 </html>

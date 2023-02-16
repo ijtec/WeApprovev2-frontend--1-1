@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Date Picker Example</title>
+    <style>
+      /* Calendar styles */
+      .calendar {
+        display: none;
+        position: absolute;
+        top: 40px;
+        left: 0;
+        background-color: #fff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        z-index: 9999;
+      }
+      .calendar label {
+        display: block;
+        margin-bottom: 5px;
+      }
+      .calendar select {
+        display: inline-block;
+        margin-right: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="date-input">Date:</label>
+      <input type="text" id="date-input" readonly>
+      <button id="calendar-button">Select Date</button>
+      <div id="calendar" class="calendar">
+        <label for="month">Month:</label>
+        <select id="month">
+          <option value="0">January</option>
+          <option value="1">February</option>
+          <option value="2">March</option>
+          <option value="3">April</option>
+          <option value="4">May</option>
+          <option value="5">June</option>
+          <option value="6">July</option>
+          <option value="7">August</option>
+          <option value="8">September</option>
+          <option value="9">October</option>
+          <option value="10">November</option>
+          <option value="11">December</option>
+        </select>
+        <label for="year">Year:</label>
+        <select id="year"></select>
+        <br>
+        <button id="submit">Submit</button>
+      </div>
+    </div>
+    <script>
+      var dateInput = document.getElementById('date-input');
+      var calendarButton = document.getElementById('calendar-button');
+      var calendar = document.getElementById('calendar');
+      var monthSelect = document.getElementById('month');
+      var yearSelect = document.getElementById('year');
+      var submitButton = document.getElementById('submit');
+
+      // Populate year select with the years from 1900 to the current year
+      var currentYear = new Date().getFullYear();
+      for (var i = 1900; i <= currentYear; i++) {
+        var option = document.createElement('option');
+        option.value = i;
+        option.textContent = i;
+        yearSelect.appendChild(option);
+      }
+
+      // Show the calendar when the user clicks the calendar button
+      calendarButton.addEventListener('click', function() {
+        calendar.style.display = 'block';
+      });
+
+      // Hide the calendar when the user clicks outside of it
+      document.addEventListener('click', function(event) {
+        if (event.target !== calendarButton && !calendar.contains(event.target)) {
+          calendar.style.display = 'none';
+        }
+      });
+
+      // When the user submits the date, update the input field with the selected date and hide the calendar
+      submitButton.addEventListener('click', function() {
+        var month = monthSelect.value;
+        var year = yearSelect.value;
+        var selectedDate = new Date(year, month, 1);
+        dateInput.value = selectedDate.toLocaleDateString();
+        calendar.style.display = 'none';
+      });
+    </script>
+  </body>
+</html>
