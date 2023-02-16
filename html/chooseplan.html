@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="../css/layout.css" rel="stylesheet">
+    <link href="../css/style.css" rel="stylesheet">
+    <link href="../css/hover.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bade0d0075.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <title>Choose Plan</title>
+</head>
+
+<body class="flex ">
+    <div>
+        <!-- navbar -->
+        <div class='nav-container '>
+            <div class='nav-list  '>
+                <img src="../assets/WeApprove black.png" class="logo ">
+                <div class='nav-links '>
+                    <div class='link  navitemsdiv '>
+                        <i class="fa-solid fa-border-all "></i>
+                        <a href="./dashboard.html" class='anchor '>Dashboard</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-user-tie text-[1.22vw]"></i>
+                        <a href="./managestaff.html" class='anchor ml-[8%]'>Manage Staff</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-suitcase text-[1.22vw]"></i>
+                        <a href="./Managedept.html" class='anchor ml-[8%]'>Manage Department</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-credit-card text-[1.22vw]"></i>
+                        <a href="./manageSubscription.html" class='anchor ml-[8%]'>Manage Subscription</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-file text-[1.22vw]"></i>
+                        <a href="./reports.html" class='anchor ml-[8%]'>Report</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] w-full hover:text-[#D40E1F] navitemsdiv font-medium flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]  '>
+                        <i class="fa-solid fa-arrow-right-from-bracket text-[1.22vw]"></i>
+                        <a href="" class='anchor ml-[8%]'>Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div class="dropdownDiv">
+        <div class="dropdown">
+            <div
+                class="visibledropdown flex px-1 items-center justify-between w-full h-[3.1vw] border-[1px] border-[#EAAC2980] border-solid">
+                <img src="../assets/girl.jpg" alt="" srcset="" class="userImg">
+                <h1 class="userName text-[1vw] font-medium text-[#707070]">Adeola Thompson</h1>
+                <!-- <span class="dropdown-toggle " style="background-color: transparent !important;"></span> -->
+                <i class="dropdown-toggle fa-solid fa-caret-down border-none "></i>
+            </div>
+            <div class="dropdown-menu">
+                <a class="dropdown-item" data-value="1">
+                    <img src="../assets/briefcase-solid.png" alt="Image 1">
+                    Company Profile
+                </a>
+                <hr>
+                <a class="dropdown-item" data-value="2">
+                    <img src="../assets/key-solid.png" alt="Image 2">
+                    Change Profile
+                </a>
+                <hr>
+                <a class="dropdown-item" data-value="3">
+                    <img src="../assets/logout.png" alt="Image 3">
+                    Logout
+                </a>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <div class="container">
+        <main role="main" class="">
+        <div class="pricingdiv">
+            <h3 class="chooseaplanheading">Choose Plan</h3>
+            <div class="plansDiv">
+                <div class="planDiv price-card ">
+                    <h4 class="planDivPlanName">Basic Plan
+                    </h4>
+                    <div class='planDivPlanPrice price'>
+                        ₦ 1000</div>
+                    <hr class="planDivbreakline">
+                    <div class="planDivCheckboxs  plans">
+                        <span class="planDivCheckCircleDiv"><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext  ">30 day(s) Duration </p>
+                        </span>
+                        <span class="planDivCheckCircleDiv"><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext "> 10 User(s) </p>
+                        </span>
+                        <span class="planDivCheckCircleDiv"><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext ">Upgrade options </p>
+                        </span>
+                        <span class="planDivCheckCircleDiv "><i class="planDivCheckCircle fa-solid fa-circle-check"></i>
+                            <p class=" plandivcheckboxtext ">Full access</p>
+                        </span>
+                        <span class="planDivCheckCircleDiv"><i class="fa-solid fa-circle-check"></i>
+                            <p class="planDivExtraFeature plandivcheckboxtext ">Extra features</p>
+                        </span>
+                    </div>
+                    <button class="choosePlanBtn  ">Choose
+                        Plan</button>
+                </div>
+                <div class="planDiv price-card ">
+                    <h4 class="planDivPlanName">Standard Plan
+                    </h4>
+                    <div class='price planDivPlanPrice'>
+                        ₦ 2250</div>
+                    <hr class=" planDivbreakline">
+                    <div class="planDivCheckboxs  plans">
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext "> 30 day(s) Duration </p>
+                        </span>
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext "> 10 User(s) </p>
+                        </span>
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext ">Upgrade options </p>
+                        </span>
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext ">Full access</p>
+                        </span>
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext ">Extra features</p>
+                        </span>
+                    </div>
+                    <button class="choosePlanBtn  ">Choose
+                        Plan</button>
+                </div>
+        
+                <div class="planDiv  price-card">
+                    <h4 class="planDivPlanName">Premium Plan
+                    </h4>
+                    <div class='price planDivPlanPrice'>
+                        ₦ 5520</div>
+                    <hr class=" planDivbreakline l">
+                    <div class="planDivCheckboxs  plans">
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext ">30 day(s) Duration </p>
+                        </span>
+
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext "> 10 User(s) </p>
+                        </span>
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext ">Upgrade options </p>
+                        </span>
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext ">Full access</p>
+                        </span>
+                        <span class="planDivCheckCircleDiv "><i class="fa-solid fa-circle-check"></i>
+                            <p class="plandivcheckboxtext ">Extra features</p>
+                        </span>
+                    </div>
+                    <button class="choosePlanBtn  ">Choose
+                        Plan</button>
+                </div>
+            </div>
+        </div>
+        </main>
+    </div>
+    <script>
+        const dropdownToggle = document.querySelector('.dropdown-toggle');
+        const dropdownMenu = document.querySelector('.dropdown-menu');
+        const dropdownItems = document.querySelectorAll('.dropdown-item');
+
+        dropdownToggle.addEventListener('click', function () {
+            dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+        });
+
+        dropdownItems.forEach(item => {
+            item.addEventListener('click', function () {
+                dropdownMenu.style.display = (dropdownMenu.style.display === 'block') ? 'none' : 'block';
+            });
+        });
+
+    </script>
+</body>
+
+</html>
