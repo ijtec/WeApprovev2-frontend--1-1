@@ -1,5 +1,5 @@
 .feature-card:hover{
-    border: solid 2.5px #C3213185 ;
+    border: solid 2.5px #C3213185 !important ;
 }
 .feature-card:hover > img,.imgs{
     background-color: #D7B321;

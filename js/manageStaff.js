@@ -18,8 +18,6 @@ newstaffmodaldropdownToggle.addEventListener("click", function () {
 newstaffmodaldropdownItems.forEach((newstaffmodaldropdown) => {
   newstaffmodaldropdown.addEventListener("click", () => {
     newstaffmodalstatus.innerHTML = newstaffmodaloptions.innerHTML;
-    console.log("clicked");
-    console.log(newstaffmodaloptions.innerHTML);
     newstaffmodaldropdownMenu.style.display =
       newstaffmodaldropdownMenu.style.display === "block" ? "none" : "block";
   });

@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../css/login.css">
     <title>Onboarding</title>
 </head>
-
 <body>
     <section class="section">
         <div class="img-section">
@@ -45,7 +44,7 @@
                                 <div class="password-div">
                                     <label for="password" class="password-text">Password</label>
                                     <div class="forgot-password">
-                                        <a href="#" class="a-forgot-password">Forgot your
+                                        <a href="/html/forgotpassword.html" class="a-forgot-password " style="color:#334AFF">Forgot your
                                             password?</a>
                                     </div>
                                 </div>
@@ -53,14 +52,14 @@
                                     <input id="password" name="password" type="password" autocomplete="current-password"
                                     required
                                     class="password-input"
-                                    placeholder="***********************">
-                                    <img src="../assets/Icon feather-eye.png" class="eye" alt="eye">
+                                    placeholder="">
+                                    <!-- <img src="../assets/Icon feather-eye.png" class="eye" alt="eye"> -->
                                 </div>
                             </div>
                         </div>
                         <div class="submit">
                             <button type="submit"
-                                class="button">
+                                class="button" id="loginBtn">
     
                                 Login
                             </button>
@@ -78,6 +77,11 @@
 
         </div>
     </section>
+    <script>
+        document.getElementById('loginBtn').addEventListener('click',()=>{
+            window.location.replace('/html/dashboard.html')
+        })
+    </script>
 </body>
 
 </html>

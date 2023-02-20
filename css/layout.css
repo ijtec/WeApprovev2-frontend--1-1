@@ -29,17 +29,19 @@ body{
     display: flex;
     flex-direction: column;
 }
+
 .logo {
     width: 70%;
-    margin-top: 2vw;
+    margin-top: 2.5vw;
     align-self: center;
 }
 .nav-links {
     display: flex;
     flex-direction: column;
-    margin-top: 6.25vw;
+    margin-top: 3vw;
     width: 70%;
     align-self: center;
+    height:60%;
 }
 .link {
     color: #707070;

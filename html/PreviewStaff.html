@@ -91,10 +91,10 @@
             <div class="d-flex align-items-center justify-content-between bg-white px-2 font-weight-bold font-inter text-1.4vw" style="height: 3vw ;padding-top: 0.5vw;">
                 <p class="vw1 d-flex justify-content-center align-items-center " style="height: 100%;color: #D40E1F;font-weight: bold;margin-top: 1vw;">Preview Staff</p>
                 <div class="d-flex align-items-center">
-                    <button id="uploadStaff" class="btn  py-2 px-4 text-1vw" style="color: #D40E1F;">
+                    <button id="addStaffbtn" class="btn  py-2 px-4 text-1vw" style="color: #D40E1F;">
                         <i class="fa-solid fa-plus"></i> Add New Staff
                     </button>
-                    <button id="uploadStaff" class="btn btn-outline-secondary py-2 px-4 text-1vw">
+                    <button id="uploadStaffbtn" class="btn btn-outline-secondary py-2 px-4 text-1vw">
                         <i class="fa-solid fa-arrow-up-from-bracket"></i> Upload Staff (.csv, .xls)
                     </button>
                 </div>
@@ -141,6 +141,81 @@
         </tr>    
            </tbody>
 </table>
+<!-- uploadStaffModal -->
+<div class="uploadStaffModal modal-container" id="uploadStaffModal">
+  <div class="uploadStaffmodal-content">
+    <div class="uploadStaffmodal-header">
+      <h2 style="color:#D40E1F;">Upload Staff</h2>
+      <span class="close-button" id="closeUploadStaffModal"><i class="fa-regular fa-circle-xmark"></i></span>
+    </div>
+    <hr>
+    <div class="uploadStaffmodal-body">
+      <div class="uploadStaffdropdown">
+        <label for="">Add Department</label>
+        <select id="uploadStaffbuttondropdown-1">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+      <div class="uploadStaffdropdown">
+        <label for="">Import staff File</label>
+        <select id="uploadStaffbuttondropdown-2">
+          <option value="option1">Option 1</option>
+          <option value="option2">Option 2</option>
+          <option value="option3">Option 3</option>
+        </select>
+      </div>
+      <div class="uploadStaffmodal-button">
+        <button class="uploadStaffbutton">Submit</button>
+        <p>Download Template Here</p>
+      </div>    
+    </div>
+  </div>
+</div>
+<!-- add new staff modal -->
+<div class="newStaffModalcontainer" id="newStaffModalcontainer">
+        <div class="newStaffform">
+            <div class="newstaffmodaltittlediv">
+                <h1 class="newstaffmodaltitle">Add New Staff</h1>
+                <i class="fa-solid fa-circle-xmark newstaffdropdowncanclebtn" id="newStaffModalClose" style="cursor: pointer;"></i>
+            </div>
+            <div class="newstaffmodalinputsdiv">
+                <div class="nameDiv">
+                    <h1 class="newstaffmodallabel">Full Name</h1>
+                    <input type="text" placeholder="Enter the name of staff" class="newstaffmodalinputs" />
+                </div>
+                <div class="deptDiv">
+                    <h1 class="newstaffmodallabel">Department</h1>
+                    <input type="department" placeholder="Enter department of staff" class="newstaffmodalinputs" />
+                </div>
+                <div class="emaildiv">
+                    <h1 for="email" class="newstaffmodallabel">Email</h1>
+                    <input type="email" placeholder=" Enter email of staff " class="newstaffmodalinputs" />
+                </div>
+                <div class="newstaffmodalstatusDiv">
+                    <h1 class="newstaffmodallabel">Status</h1>
+                    <div class="newstaffmodaldropdown">
+                        <div
+                            class="visiblenewstaffmodaldropdown flex px-1 items-center justify-between w-full h-[3.1vw] border-[1px] border-[#EAAC2980] border-solid">
+                            <h1 class="newstaffmodalstatus">inactive</h1>
+                            <i class="newstaffmodaldropdown-toggle fa-solid fa-caret-down border-none " id="newstaffmodaldropdown-toggle"></i>
+                        </div>
+
+                        <div class="newstaffmodaldropdown-menu">
+                            <a class="newstaffmodaldropdown-item" data-value="1">
+                                <h1 class="newstaffmodaloptions">active</h1>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <button class="newstaffmodaladdstaffbtn">
+                <h1>Add</h1>
+            </button>
+        </div>
+    </div>
+    </div>
 </div>
 </div>
     
@@ -159,4 +234,38 @@
             $(".dataTables_filter").hide();
             $(".dataTables_length").hide();
         });
+        function toggleUploadStaffModal() {
+  console.log("toggled");
+  if (document.getElementById("uploadStaffModal").style.display === "block") {
+    document.getElementById("uploadStaffModal").style.display = "none";
+  } else {
+    document.getElementById("uploadStaffModal").style.display = "block";
+  }
+}
+
+document
+  .getElementById("closeUploadStaffModal")
+    .addEventListener("click", toggleUploadStaffModal);
+  
+document
+  .getElementById("uploadStaffbtn")
+  .addEventListener("click", toggleUploadStaffModal);
+  
+
+function toggleAddStaffModal() {
+  console.log("toggled");
+  if (
+    document.getElementById("newStaffModalcontainer").style.display === "none"
+  ) {
+    document.getElementById("newStaffModalcontainer").style.display = "flex";
+  } else {
+    document.getElementById("newStaffModalcontainer").style.display = "none";
+  }
+}
+document
+  .getElementById("newStaffModalClose")
+  .addEventListener("click", toggleAddStaffModal);
+document
+  .getElementById("addStaffbtn")
+  .addEventListener("click", toggleAddStaffModal);
 </script>

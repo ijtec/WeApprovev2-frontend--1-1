@@ -51,7 +51,7 @@
 }
 
 .indexPortalLogin:hover {
-  background-color: #9F810A;
+  background-color: #C32131;
 }
 
 /* hero */
@@ -447,8 +447,8 @@ button.aboutweapproveFreeTrialButton:hover {
 
 .planDivbreakline{
     margin-top: 3.3vw;
-    border: 1px solid #74747426;
-    width: 100;
+    border: 5px solid white;
+    width: 100%;
 }
 .planDivCheckboxs{
      margin-top: 3.3;
@@ -516,9 +516,9 @@ button.aboutweapproveFreeTrialButton:hover {
         font-size: 3.4vw;
           margin-top: 2.3vw;
     }
-     .planDivbreakline{
+     /* .planDivbreakline{
         margin-top: 2.3vw;
-    }
+    } */
     .planDivCheckboxs{
         margin-top: 2.3vw;
     }

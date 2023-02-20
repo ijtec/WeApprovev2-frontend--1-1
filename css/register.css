@@ -334,11 +334,16 @@ input.appearance-none {
 
 .add-departments {
     font-size: 0.75rem;
+    color: #3880E2;
 }
 
 .dept {
     font-weight: 500;
     color: #3880E2;
+}
+
+.text{
+    margin-top: 1vw;
 }
 
 .checkboxes {

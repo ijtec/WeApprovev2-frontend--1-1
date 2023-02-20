@@ -6,6 +6,9 @@
     margin: 0;
     padding: 0;
 }
+input{
+    outline: #707070;
+}
 input::-webkit-input-placeholder{
     color: #8E8E8E;
     opacity: 0.3;
@@ -246,7 +249,7 @@ input::-webkit-input-placeholder{
 /* NewStaffModal */
 
 .newStaffModalcontainer{
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -432,7 +435,7 @@ input::-webkit-input-placeholder{
 
 /* add new department modal */
 .newdepartmentModalcontainer{
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   justify-content: center;
@@ -447,7 +450,7 @@ input::-webkit-input-placeholder{
 }
 .newdepartmentform{
     width: 35vw;
-    height: 75vh ;
+    min-height: 75vh ;
     background-color: white;
     display: flex;
     flex-direction: column;
@@ -464,7 +467,7 @@ input::-webkit-input-placeholder{
   }
 
   .newdepartmentmodalinputsdiv{
-    height:80%;
+    height:95%;
     padding: 0 7%;
     display: flex;
     flex-direction: column;
@@ -484,12 +487,12 @@ input::-webkit-input-placeholder{
 
   .newdepartmentmodalinputs{
     width: 80%;
-    padding: 4% 3%;
+    padding: 2% 3%;
     background-color: white;
     border: 1px solid #E2E2E2;
     border-radius: 0.5vw;
     outline: none;
-    margin-top: 2%;
+    margin-top: 1%;
     color: #A5A5A5;
   }
 
@@ -620,7 +623,7 @@ input::-webkit-input-placeholder{
 /* make payment modal */
 
 .makepaymentModalcontainer{
-  display: flex;
+  display: none;
   align-items: center;
   flex-direction: column;
   justify-content: center;

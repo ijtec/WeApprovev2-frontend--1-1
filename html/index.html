@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,7 +15,6 @@
     <title>WeApprove</title>
 </head>
 <body class="">
-
     <!-- navbar -->
     <div class="navigation">
         <img src="../assets/WeApprove black.png" alt="" class="indexNavigationLogo nav-logo">
@@ -36,7 +34,7 @@
                 <h1 class="manageApproval">Manage Approval With The Best Application</h1>
                 <p class="manageMemos">Manage your Memos and Budgets through an intuitive Approval Workflow Platform.
                 </p>
-                <a href="/Login.html" class="freeTrialButton">Free Trial</a>
+                <a href="/html/register.html" class="freeTrialButton">Free Trial</a>
             </div>
             <div class="assetPic"
                 style="background:url('../assets/Group\ 28.png') no-repeat; background-position: 90% 90%;">
@@ -108,7 +106,7 @@
                         Enhances visibility in organizational processes</p>
                 </div>
             </div>
-            <button class="aboutweapproveFreeTrialButton">Free Trial</button>
+            <button class="aboutweapproveFreeTrialButton" id="aboutweapproveFreeTrialButton2" >Free Trial</button>
         </div>
     </div>
 
@@ -331,6 +329,11 @@
             </div>
         </div>
     </div>
+    <script>
+        document.getElementById('aboutweapproveFreeTrialButton2').addEventListener('click',()=>{
+            window.location.replace('/html/register.html')
+        })
+    </script>
     
     
     <script src="https://kit.fontawesome.com/bade0d0075.js" crossorigin="anonymous"></script>
