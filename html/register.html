@@ -5,264 +5,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/register.css">
-    <link rel="stylesheet" href="../css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
-
+    <link rel="stylesheet" href="../css/login.css">
     <title>Onboarding</title>
-
-    <style>
- .password-container {
-  position: relative;
-  display: flex;
-  align-items: center;
-  width: 200px;
-  justify-content: space-between;
-   border: 1px solid black;
-}
-
-.password-container > #password {
-    width: 90% !important;
-    border: none !important;
-    outline: none !important;
-    color: #a9a9a9;
-    padding: 15px;
-    height: 16px !important;
-}
-
-.password-container > input[type="text"] {
-  width: 100% !important;
-    border: none !important;
-    outline: none !important;
-    color: #a9a9a9;
-    padding: 15px;
-}
-
-
-#toggle-password {
-  position: absolute;
-  top: 50%;
-  right: 10px;
-  transform: translateY(-50%);
-  background: none;
-  border: none;
-  cursor: pointer;
-  outline: none;
-}
-
-#toggle-password:focus {
-  outline: none;
-}
-
-#password {
-   /* add padding to make space for the icon */
-  width:100% !important;
-  border-radius: 0.375rem;
-}
-
-    </style>
 </head>
-
 <body>
     <section class="section">
         <div class="img-section">
-            <img class="image" src="../assets/login.png" alt="Your Company">
+             <img class="image" src="../assets/login.png" alt="Your Company"> 
         </div>
-
-        <div class="container">
-            <div class="second-container">
-                <div class="home">
+        <div class="container" >             
+            <div class="second-container" >
+                <div class="home" >
                     <div class="home-image">
                         <img src="../assets/Icon open-home.png">
                     </div>
                     <p class="back-home">Go back home</p>
-                </div>
-                <div class="third-container">
+                </div> 
+                <div class="third-container" >
                     <div class="sect">
                         <div>
                             <img class="weApproveLogo" src="../assets/logo.png" alt="Your Company">
                         </div>
                         <div class="text">
-                            <p class="login"><a href="../html/login.html">Login</a></p>
-                            <p class="register">Register</p>
+                            <p class="register"><a href="../html/login.html">Login</a></p>
+                            <p class="login"><a href="../html/register.html">Register</a></p>
                         </div>
                     </div>
-                    <form class="form">
-                        <div class="form-div">
-                            <div class="company">
-                                <label for="company" class="company-name">Company Name</label>
-                                <input id="company-name" name="company" type="text" autocomplete="email" required
-                                    class="company-input" placeholder="Enter the name of your company">
-                            </div>
-                            <div>
-                                <div class="section-flex">
-                                    <div class="email">
-                                        <label for="email-address" class="email-address">Email Address</label>
-                                        <input class="email-input" type="text" s placeholder="xyz@samplemail.com"
-                                            required>
-                                    </div>
-                                    <div class="phone-number">
-                                        <label for="phone-number" class="number">Phone Number</label>
-                                        <input class="phone-input" type="text" placeholder="0***********">
-                                    </div>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="section-flex">
-                                    <div class="password">
-                                        <label for="password" class="pass">Password</label>
-                                        <div class="password-container">
-                                            <input type="password" id="password" name="password" placeholder="Enter your password" />
-                                            <button type="button" id="toggle-password">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                        </div>
-                                        
-                                    </div>
-                                    <div class="confirm-password">
-                                        <label for="confirm-password" class="pass">Confirm Password</label>
-                                        <div class="password-container">
-                                            <input type="password" id="password" name="password" placeholder="Enter your password" />
-                                            <button type="button" id="toggle-password">
-                                                <i class="fas fa-eye"></i>
-                                            </button>
-                                        </div>                                      
-                                    </div>
-                                </div>
-                            </div>
+                    <form class="register-form" style="border-color: red;">
+                        <div class="company">
+                          <label for="">Company name</label>
+                          <input type="text">
                         </div>
-                        <div class="departments">
-                            <label for="departments" class="departments">Choose your departments </label>
-                            <span class="add-departments" id="addNewDeptbtn" style="cursor: pointer;">
-                                +.Add Departments
+                        <div>
+                            <span>
+                                <label for="">Email</label>
+                                <input type="email">
+                            </span>
+                            <span>
+                                <label for="">Phone number</label>
+                                <input type="tel">
                             </span>
                         </div>
-                        <div class="checkboxes">
-                            <div class="finance-row">
-                                <input type="checkbox" class="finance-checkbox" id="hs-checkbox-group-1">
-                                <label for="hs-checkbox-group-1" class="finance-text">Finance</label>
+                        <div>
+                            <span>
+                                <label for="">Password</label>
+                                <input type="password">
+                            </span>
+                            <span>
+                                <label for="">Confirm password</label>
+                                <input type="password">
+                            </span>
+                        </div>
+                        <div>
+                            <div className="regDeptHeader" style="display: flex;justify-content:space-between;width: 100%;">
+                                <p>Choose your departments</p>
+                                <p>+Add new department</p>
                             </div>
-
-                            <div class="production-row">
-                                <input type="checkbox" class="production-checkbox"
-                                    id="hs-checkbox-group-2">
-                                <label for="hs-checkbox-group-2" class="production-text">Production</label>
-                            </div>
-                            <div class="audit-row">
-                                <input type="checkbox" class="audit-checkbox" id="hs-checkbox-group-3">
-                                <label for="hs-checkbox-group-3" class="audit-text">Audit</label>
-
-                            </div>
-                            <div class="resource-row">
-                                <input type="checkbox" class="resource-checkbox" id="hs-checkbox-group-1">
-                                <label for="hs-checkbox-group-1" class="resource-text">Human
-                                    Resource</label>
-                            </div>
-                            <div class="research-row">
-                                <input type="checkbox" class="research-checkbox"
-                                    id="hs-checkbox-group-2">
-                                <label for="hs-checkbox-group-2" class="research-text">Research & <br>
-                                    Development</label>
-                            </div>
-                            <div class="purchase-row">
-                                <input type="checkbox" class="purchase-checkbox" id="hs-checkbox-group-3">
-                                <label for="hs-checkbox-group-3" class="purchase-text">Purchasing</label>
-
-                            </div>
-                            <div class="sales-row">
-                                <input type="checkbox" class="sales-checkbox" id="hs-checkbox-group-1">
-                                <label for="hs-checkbox-group-1" class="sales-text">Sales</label>
-                            </div>
-                            <div class="technical-row">
-                                <input type="checkbox" class="technical-checkbox"
-                                    id="hs-checkbox-group-2">
-                                <label for="hs-checkbox-group-2" class="technical-text">Techincal</label>
-                            </div>
-                            <div class="maintain-row">
-                                <input type="checkbox" class="maintain-checkbox" id="hs-checkbox-group-3">
-                                <label for="hs-checkbox-group-3" class="maintain-text">Maintenance</label>
-                            </div>
-                            <div class="supply-row">
-                                <input type="checkbox" class="supply-checkbox"
-                                    id="hs-checkbox-group-1">
-                                <label for="hs-checkbox-group-1" class="supply-text">Supply
-                                    Chain</label>
+                            <div class="deptsMap" >
+                                <span></span>
                             </div>
                         </div>
-                        <div class="submit">
-                            <a href="./chooseplan.html" type="submit" class="button" >
-                                Register
-                            </a>
-
-                        </div>
-
+                        <button>
+                            Register
+                        </button>
                     </form>
                 </div>
             </div>
 
         </div>
-       
     </section>
-     <!-- add new department -->
-            <div class="newdepartmentModalcontainer" id="newdepartmentModalcontainer"  >
-        <div class="newdepartmentform">
-            <div class="newdepartmentmodaltittlediv">
-                <h1 class="newdepartmentmodaltitle">Add New Department</h1>
-                <i class="fa-solid fa-circle-xmark newdepartmentdropdowncanclebtn" id="newStaffModalClose"></i>
-            </div>
-            <div class="newdepartmentmodalinputsdiv">
-                <div class="nameDiv">
-                    <h1 class="newdepartmentmodallabel">Department Name</h1>
-                    <input type="text" placeholder="Enter the name of the Department" class="newdepartmentmodalinputs" />
-                </div>
-                <div class="deptcodeDiv">
-                    <h1 class="newdepartmentmodallabel">Department Code Name</h1>
-                    <input type="department" placeholder="Enter Code Name" class="newdepartmentmodalinputs" />
-                </div>
-                <div class="refnumberdiv">
-                    <h1  class="newdepartmentmodallabel">Department REF Number</h1>
-                    <input type="email" placeholder=" Enter REF Number" class="newdepartmentmodalinputs" />
-                </div>
-                <div>
-                    <h1 class="newdepartmentmodallabel">Department SEQ Number</h1>
-                    <input type="email" placeholder=" Enter SEQ Number" class="newdepartmentmodalinputs" />
-                </div>
-            </div>
-            <button class="newdepartmentmodaladdstaffbtn">
-                <h1>Add</h1>
-            </button>
-        </div>
-    </div>
-    </div>
-    <script >
-        function toggleNewDeptModal() {
-            console.log("toggled");
-            if (
-                document.getElementById("newdepartmentModalcontainer").style.display === "none"
-            ) {
-                document.getElementById("newdepartmentModalcontainer").style.display = "flex";
-            } else {
-                document.getElementById("newdepartmentModalcontainer").style.display = "none";
-            }
-            }
-            document
-            .getElementById("newStaffModalClose")
-            .addEventListener("click", toggleNewDeptModal);
-            document
-            .getElementById("addNewDeptbtn")
-            .addEventListener("click", toggleNewDeptModal);
-
-            // toggle password visibility
-            const togglePassword = document.querySelector('#toggle-password');
-                const password = document.querySelector('#password');
-
-                togglePassword.addEventListener('click', function () {
-                    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
-                    password.setAttribute('type', type);
-                    this.querySelector('i').classList.toggle('fa-eye');
-                    this.querySelector('i').classList.toggle('fa-eye-slash');
-                });
-
+    <script>
+      
     </script>
 </body>
 

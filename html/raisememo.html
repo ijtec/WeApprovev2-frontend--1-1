@@ -20,43 +20,100 @@
 
 <body class="flex ">
     <div>
-        <!-- navbar -->
-        <div class='nav-container '>
-            <div class='nav-list  '>
-                <img src="../assets/WeApprove black.png" class="logo ">
-                <div class='nav-links '>
-                    <div class='link  navitemsdiv '>
-                        <i class="fa-solid fa-border-all "></i>
-                        <a href="./dashboard.html" class='anchor '>Dashboard</a>
-                    </div>
-                    <div
-                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
-                        <i class="fa-solid fa-user-tie text-[1.22vw]"></i>
-                        <a href="./managestaff.html" class='anchor ml-[8%]'>Manage Staff</a>
-                    </div>
-                    <div
-                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
-                        <i class="fa-solid fa-suitcase text-[1.22vw]"></i>
-                        <a href="./Managedept.html" class='anchor ml-[8%]'>Manage Department</a>
-                    </div>
-                    <div
-                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
-                        <i class="fa-solid fa-credit-card text-[1.22vw]"></i>
-                        <a href="./manageSubscription.html" class='anchor ml-[8%]'>Manage Subscription</a>
-                    </div>
-                    <div
-                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
-                        <i class="fa-solid fa-file text-[1.22vw]"></i>
-                        <a href="./reports.html" class='anchor ml-[8%]'>Report</a>
-                    </div>
-                    <div
-                        class='link  text-[#707070] w-full hover:text-[#D40E1F] navitemsdiv font-medium flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]  '>
-                        <i class="fa-solid fa-arrow-right-from-bracket text-[1.22vw]"></i>
-                        <a href="" class='anchor ml-[8%]'>Log out</a>
-                    </div>
+    <!-- navbar -->
+    <div class='nav-container '>
+        <div class='nav-list  '>
+            <img src="../assets/WeApprove black.png" class="logo ">
+            <div class='nav-links'>
+                <div class='link  navitemsdiv '>
+                    <i class="fa-solid fa-border-all "></i>
+                    <a href="./dashboard.html" class='anchor '>Dashboard</a>
+                </div>
+                <div class='link  navitemsdiv '>
+                    <i class="fa-solid fa-border-all "></i>
+                    <a href="./processmemo.html" class='anchor '>Process Memo</a>
+                </div>
+                <div class='link  navitemsdiv'>
+                    <i class="fa-solid fa-border-all "></i>
+                    <a href="./raisememo.html" class='anchor '>Raise Memo</a>
+                </div>
+                <div
+                    class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                    <i class="fa-solid fa-user-tie text-[1.22vw]"></i>
+                    <a href="./managestaff.html" class='anchor ml-[8%]'>Manage Staff</a>
+                </div>
+                <div
+                    class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                    <i class="fa-solid fa-suitcase text-[1.22vw]"></i>
+                    <a href="./Managedept.html" class='anchor ml-[8%]'>Manage Department</a>
+                </div>
+                <div
+                    class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                    <i class="fa-solid fa-credit-card text-[1.22vw]"></i>
+                    <a href="./manageSubscription.html" class='anchor ml-[8%]'>Manage Subscription</a>
+                </div>
+                <div
+                    class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                    <i class="fa-solid fa-file text-[1.22vw]"></i>
+                    <a href="./reports.html" class='anchor ml-[8%]'>Report</a>
+                </div>
+                <div
+                    class='link  text-[#707070] w-full hover:text-[#D40E1F] navitemsdiv font-medium flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]  '>
+                    <i class="fa-solid fa-arrow-right-from-bracket text-[1.22vw]"></i>
+                    <a href="" class='anchor ml-[8%]'>Log out</a>
                 </div>
             </div>
         </div>
+    </div>
+    <!-- mobile nav bar -->
+    <div class="mobilenavlogodiv">
+        <i class="fa-solid fa-bars" onclick="toggleNav()"></i>
+        <img src="../assets/WeApprove black.png" class="mobilelogo ">
+    </div>
+    <div class='mobilenav-container'>
+        <div class='nav-list'>
+            <div class='nav-links '>
+                <div class='link  navitemsdiv '>
+                    <i class="fa-solid fa-border-all "></i>
+                    <a href="./dashboard.html" class='anchor '>Dashboard</a>
+                </div>
+                <div class='link  navitemsdiv '>
+                    <i class="fa-solid fa-border-all "></i>
+                    <a href="./processmemo.html" class='anchor '>Process Memo</a>
+                </div>
+                <div class='link  navitemsdiv'>
+                    <i class="fa-solid fa-border-all "></i>
+                    <a href="./raisememo.html" class='anchor '>Raise Memo</a>
+                </div>
+                <div
+                    class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                    <i class="fa-solid fa-user-tie text-[1.22vw]"></i>
+                    <a href="./managestaff.html" class='anchor ml-[8%]'>Manage Staff</a>
+                </div>
+                <div
+                    class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                    <i class="fa-solid fa-suitcase text-[1.22vw]"></i>
+                    <a href="./Managedept.html" class='anchor ml-[8%]'>Manage Department</a>
+                </div>
+                <div
+                    class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                    <i class="fa-solid fa-credit-card text-[1.22vw]"></i>
+                    <a href="./manageSubscription.html" class='anchor ml-[8%]'>Manage Subscription</a>
+                </div>
+                <div
+                    class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                    <i class="fa-solid fa-file text-[1.22vw]"></i>
+                    <a href="./reports.html" class='anchor ml-[8%]'>Report</a>
+                </div>
+                <div
+                    class='link  text-[#707070] w-full hover:text-[#D40E1F] navitemsdiv font-medium flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]  '>
+                    <i class="fa-solid fa-arrow-right-from-bracket text-[1.22vw]"></i>
+                    <a href="" class='anchor ml-[8%]'>Log out</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
     </div>
 
     <!-- Dropdown menu -->

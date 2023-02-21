@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href="./css/hover.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/bade0d0075.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js"></script>
+    <title>Dashboard</title>
+    <style>
+
+        .navbar {
+            box-shadow: 3px 0px 10px #00000029;
+        }
+
+                        .dropdown {
+                position: relative;
+                display: inline-block;
+                }
+
+                .dropdown-toggle {
+                padding: 10px;
+                background-color: #ddd;
+                border: 1px solid #aaa;
+                cursor: pointer;
+                }
+
+                .dropdown-menu {
+                position: absolute;
+                top: 100%;
+                left: 0;
+                z-index: 1;
+                display: none;
+                background-color: #fff;
+                border: 1px solid #aaa;
+                }
+
+                .dropdown-item {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                cursor: pointer;
+                }
+
+                .dropdown-item img {
+                width: 20px;
+                height: 20px;
+                margin-right: 10px;
+                }
+    </style>
+</head>
+<body class="flex ">
+    <div>
+                      <!-- navbar -->
+        <div class='w-[18.8vw] min-h-[100vh] h-full bg-[#ffffff] font-inter items-center justify-center hidden navbar lg:flex'>
+            <div class='h-[98%] w-[95%] flex flex-col '>
+                <img src="./assets/WeApprove black.png" class="w-[70%] self-center mt-[2vw]">
+                <div class='flex flex-col mt-[6.25vw] w-[70%] self-center'>
+                    <div class=' text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-border-all  text-[1.22vw]"></i>
+                        <a href="./dashboard.html" class='ml-[8%]'>Dashboard</a>
+                    </div>
+                    <div class=' text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-user-tie text-[1.22vw]"></i>
+                        <a href="./managestaff.html" class='ml-[8%]'>Manage Staff</a>
+                    </div>
+                    <div class=' text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-suitcase text-[1.22vw]"></i>
+                        <a href="./Managedept.html" class='ml-[8%]'>Manage Department</a>
+                    </div>
+                    <div class=' text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-credit-card text-[1.22vw]"></i>
+                        <a href="./manageSubscription.html" class='ml-[8%]'>Manage Subscription</a>
+                    </div>
+                    <div class=' text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-file text-[1.22vw]"></i>
+                        <a href="./reports.html" class='ml-[8%]'>Report</a>
+                    </div>
+                    <div class=' text-[#707070] w-full hover:text-[#D40E1F] navitemsdiv font-medium flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]  '>
+                        <i class="fa-solid fa-arrow-right-from-bracket text-[1.22vw]"></i>
+                        <a href="" class='ml-[8%]'>Log out</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+        <!-- Dropdown menu -->
+        <div class="absolute top-[1.7vw] right-[7.3vw]">
+            <div class="dropdown w-[14.5vw] h-[3.1vw] ">
+                <div class="flex px-1 items-center justify-between w-full h-[3.1vw] border-[1px] border-[#EAAC2980] border-solid">
+                    <img src="./assets/girl.jpg" alt="" srcset="" class="w-[2vw] h-[2vw] rounded-full">
+                    <h1 class="text-[1vw] font-medium text-[#707070]">Adeola Thompson</h1>
+                    <i class="fa-solid fa-caret-down dropdown-toggle border-none bg-[white]"></i>
+                </div>
+                <div class="dropdown-menu w-full">
+                  <a class="dropdown-item" data-value="1">
+                    <img src="./assets/briefcase-solid.png" alt="Image 1">
+                    Company Profile
+                  </a>
+                  <hr>
+                  <a class="dropdown-item" data-value="2">
+                    <img src="./assets/key-solid.png" alt="Image 2">
+                    Change Profile
+                  </a>
+                  <hr>
+                  <a class="dropdown-item" data-value="3">
+                    <img src="./assets/logout.png" alt="Image 3">
+                    Logout
+                  </a>
+                  <hr>
+                </div>
+              </div>      
+        </div>
+
+    </div>
+    </div>
+ <div class="container">
+        <main role="main" class="b">
+          <div class="bg-white">
+            <div class=" dash-contaner flex justify-between items-center mt-[2.7vw] w-[55vw] bg-white">
+                <p class="text-[#D40E1F] font-bold text-[1.7vw]">Dashboard</p>
+                <div class="flex items-center bg-[#F6191908]  rounded-lg ">
+                    <input type="text" class="outline-none text-[#707070] px-2 bg-[#F6191908] py-1 "/>
+                    <span class="fa fa-search fa-lg text-[#EAEDF0] mx-2"></span>
+                </div>
+            </div>
+            <div class="mt-[2.1vw] lg:pr-[1vw] px-[5%] lg:px-0  bg-[#F8F8F8FF] w-[95%] xl:w-[79.8vw] flex justify-between mx-auto">
+                <div class="xl:w-[53vw] w-[60%] lg:ml-[2.6vw] mt-[3.5vw] mb-[1.8vw] ">
+                    <div class="w-full flex justify-between h-[14.5vw]">
+                        <div class="w-[13vw] bg-[#D40E1F] text-white h-full flex flex-col py-[1.5vw] px-[2vw] justify-evenly rounded-lg">
+                            <div class="w-[1.8vw] bg-white h-[1.8vw] flex items-center justify-center rounded-[0.25vw]">
+                                <i class="fa-solid fa-file text-[#EB3141] text-[15px]"></i>
+                            </div>
+                            <h3 class="text-[1.8vw] font-medium">1134</h3>
+                            <p class="text-[0.7vw]">All memos raised</p>
+                            <hr>
+                            <p class="text-[0.7vw]">844 memos accepted</p>
+                            <p class="text-[0.7vw]">32 memos rejected</p>
+                            <p class="text-[0.7vw]">32 memos rejected</p>
+                        </div>
+                        <div class="w-[17.2vw] h-full flex flex-col justify-around px-[2vw] rounded-lg bg-white">
+                            <div class="flex items-center ">
+                                <span class="w-[1.8vw] bg-yellow-500 h-[1.8vw] flex items-center justify-center rounded-[0.55vw]">
+                                    <i class="fa-solid fa-table-cells-large text-[white] text-[15px]"></i>
+                                </span>
+                                <h3 class="text-[#707070] font-bold text-[1vw] ml-[2vw] ">Total department</h3>
+                            </div>
+                            <hr>
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-[1.8vw] font-bold text-[#707070]">315</h3>
+                                <span class="w-[40%] h-[4vh] bg-[#E9AC0E] rounded-[1vw] flex items-center justify-between px-[5%] text-[white]">
+                                    <i class="fa-solid fa-caret-up text-[2vw]"></i>
+                                    <span class="font-bold text-[0.8vw]">1,17%</span>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="w-[17.2vw] h-full flex flex-col justify-around px-[2vw] rounded-lg bg-white">
+                            <div class="flex items-center ">
+                                <span class="w-[1.8vw] bg-[#DC3E4B] h-[1.8vw] flex items-center justify-center rounded-[0.55vw]">
+                                    <i class="fa-solid fa-user text-[white] text-[15px]"></i>
+                                </span>
+                                <h3 class="text-[#707070] font-bold text-[1vw] ml-[1vw] ">Total Number of Staff</h3>
+                            </div>
+                            <hr>
+                            <div class="flex items-center justify-between">
+                                <h3 class="text-[1.8vw] font-bold text-[#707070]">680</h3>
+                                <span class="w-[40%] h-[4vh] bg-[#DC3E4B] rounded-[1vw] flex items-center justify-between px-[5%] text-[white]">
+                                    <i class="fa-solid fa-caret-up text-[2vw]"></i>
+                                    <span class="font-bold text-[0.8vw]">1,17%</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- @*chart*@ -->
+                    <h6 class="mt-[1.8vw] text-[#707070] text-[1vw] font-bold">Statistics</h6>
+                    <div class="  bg-white pl-[1.4vw] pt-[1.4vw] pb-[0.6vw]">
+                        <div class="">
+                            <p class="text-[#707070] font-bold text-[1vw]">Overview</p>
+                            <span>
+            
+                            </span>
+                        </div>
+                        <div class="w-[50vw] h-[20vw]">
+                            <canvas id="myChart" class="w-full h-full"></canvas>
+                        </div>
+                    </div>
+                    <h6 class="mt-[1.3vw] font-bold text-[#707070] text-[1vw]">Manage Staff</h6>
+                    <div class="mt-[0.4vw] h-[11.5vw] bg-white ">
+                        <div class='w-[100%] border-[1px] border-solid border-[#7070701D]'>
+                            <!-- table head -->
+                            <div class='bg-[#D40E1F0D] h-[50px] lg:h-[6.5vh] text-[1.4vw] xl:text-[1vw] font-inter text-[#D40E1F] font-bold flex items-center justify-around'>
+                                <h1 class="w-[10%] text-center">S/N</h1>
+                                <h1 class='w-[20%]'>Staff Name</h1>
+                                <h1 class='w-[20%]'>Department</h1>
+                                <h1 class="w-[18%] text-center ">Assign role</h1>
+                                <h1 class='w-[10%] text-center '>Action</h1>
+                            </div>
+            
+                            <!-- content to map through -->
+                            <div id="markupContainer">
+                                <div class='bg-[#ffffff] h-[60px] lg:h-[7.5vh] text-[1.4vw] xl:text-[1vw] font-inter text-[#8E8E8E] font-normal flex items-center justify-around border-b-[1px] border-b-[#7070701D] border-b-solid'>
+                                    <h1 class="w-[10%] text-center">1.</h1>
+                                    <h1 class='w-[20%] text-[1vw]'>Software Engineering</h1>
+                                    <h1 class='w-[20%] text-[1vw]'>Software Development</h1>
+                                    <div class="w-[18%] h-[65%] border-[1px] border-solid border-[#D3D3D3] text-[#8E8E8E]  flex items-center justify-around overflow-hidden">
+                                        <select class="w-full bg-white text-gray-700 text-center text-[#8E8E8E] placeholder-[#8E8E8E] outline-none border-none">
+                                            <option value="" disabled selected hidden>Choose an option</option>
+                                            <option value="option1">Option 1</option>
+                                            <option value="option2" class='outline-none'>Option 2</option>
+                                            <option value="option3" class='outline-none'>Option 3</option>
+                                            <option value="option3" disable selected>-------</option>
+                                        </select>
+                                    </div>
+                                    <div class="w-[10%] h-[50%] self-center flex items-center justify-center ">
+                                        <input type="checkbox" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+            
+                        </div>
+                    </div>
+                </div>
+                <div class=" xl:w-[19.8vw] w-[25%] ml-[3.8vw] ">
+                    <p class="mt-[1.7vw] font-bold text-[#707070] text-[1vw] ">Report</p>
+                    <div class="mt-[0.7vw] w-[19vw] bg-white h-[27vw] py-[2vw] px-[1.1vw] ">
+                        <p class="font-bold text-[#707070] text-[1.3vw] ">Memo Summary</p>
+                        <div class="mt-[2vw] flex flex-col justify-between">
+                            <div class="">
+                                <div class="flex items-center justify-between mb-[2%]">
+                                    <p class="font-medium text-[#707070] text-[1vw]">Memos Raised</p>
+                                    <span class="flex items-center justify-between self-end text-[#F53D3D] font-bold w-[22%] text-[1vw]">
+                                        <i class="fa-solid fa-wave-square"></i>
+                                        <span>70%</span>
+                                    </span>
+                                </div>
+                                <div class="w-[100%] h-[1.6vw]  rounded-xl bg-[#F8F8F8]">
+                                    <div class='h-[100%] bg-[#F6CBCF] rounded-xl' style="width: 50%;"></div>
+                                </div>
+                            </div>
+                            <div class="mt-[1.4vw] flex flex-col">
+                                <div class="flex items-center justify-between mb-[2%]">
+                                    <p class="font-medium text-[#707070] text-[1vw]">Memos Accepted</p>
+                                    <span class="flex items-center justify-between self-end text-[#F5CA3D] font-bold w-[22%] text-[1vw]">
+                                        <i class="fa-solid fa-wave-square"></i>
+                                        <span>80%</span>
+                                    </span>
+                                </div>
+                                <div class="w-[100%] h-[1.6vw]  rounded-xl bg-[#F8F8F8]">
+                                    <div class='h-[100%] bg-[#F6CBCF] rounded-xl' style="width: 70%;"></div>
+                                </div>
+                            </div>
+                            <div class="mt-[1.4vw] flex flex-col">
+                                <div class='flex items-center justify-between mb-[2%]'>
+                                    <p class="font-medium text-[#707070] text-[1vw]">Memos Rejected</p>
+                                    <span class="flex items-center justify-between self-end text-[#3D99F5] font-bold w-[22%] text-[1vw]">
+                                        <i class="fa-solid fa-wave-square"></i>
+                                        <span>50%</span>
+                                    </span>
+                                </div>
+                                <div class="w-[100%] h-[1.6vw]  rounded-xl bg-[#F8F8F8]">
+                                    <div class='h-[100%] bg-[#F6CBCF] rounded-xl' style="width: 80%;"></div>
+                                </div>
+                            </div>
+                            <div class="mt-[1.4vw] flex flex-col">
+                                <div class="flex items-center justify-between mb-[2%]">
+                                    <p class="font-medium text-[#707070] text-[1vw]">Memos Pending</p>
+                                    <span class="flex items-center justify-between self-end text-[#31B14B] font-bold w-[22%] text-[1vw]">
+                                        <i class="fa-solid fa-wave-square"></i>
+                                        <span>90%</span>
+                                    </span>
+                                </div>
+                                <div class="w-[100%] h-[1.6vw]  rounded-xl bg-[#F8F8F8]">
+                                    <div class='h-[100%] bg-[#F6CBCF] rounded-xl' style="width: 90%;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-[1.7vw] w-[19.8vw] bg-white h-[19.8vw] px-[1.1vw] pt-[1.7vw]">
+                        <div class="flex justify-between ">
+                            <p class="font-bold text-[1vw] text-[#707070] ">Budget Requirements</p>
+                            <button class="font-bold text-[1vw] text-[red] ">+</button>
+                        </div>
+                        <div class="mt-[1.6vw] font-bold text-[#707070] text-[1.3vw]">
+                            <span>Cash</span>
+                            <span class="ml-[5.3vw]">#800,000</span>
+                        </div>
+                        <div class="flex my-[2vw]">
+                            <div class="w-[50%]"></div>
+                            <div class="flex flex-col justify-between h-[5.5vw] text-[1vw] text-[#707070] font-medium">
+                                <div>
+                                    <img src="" alt="">
+                                    <p>Subscription</p>
+                                </div>
+                                <div>
+                                    <img src="" alt="">
+                                    <p>Payment</p>
+                                </div>
+                                <div>
+                                    <img src="" alt="">
+                                    <p>Expenses</p>
+                                </div>
+            
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="flex justify-around my-[1vw] text-[0.8vw] text-[#707070] font-bold ">
+                            <div class="flex items-center justify-around">
+                                <div class="w-[0.5vw] mr-[0.1vw] h-[0.5vw] bg-[#656564CC]"></div>
+                                <p>Yearly</p>
+                            </div>
+                            <div class="flex items-center justify-around">
+                                <div class="w-[0.5vw] mr-[0.1vw] h-[0.5vw] bg-[#656564CC]"></div>
+                                <p>Monthly</p>
+                            </div>
+                            <div class="flex items-center justify-around">
+                                <div class="w-[0.5vw] mr-[0.1vw] h-[0.5vw] bg-[#656564CC]"></div>
+                                <p>Daily</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+          </div>
+        </main>
+    </div>
+    <script src="./js/dashboard.js"></script>
+    <script src="./js/layout.js"></script>
+</body>
+</html>

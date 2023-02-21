@@ -4,17 +4,19 @@ body {
     margin: 0;
 }
 
-
 .section {
     display: flex;
-    height: 100%;
-}
-
-.img-section {
-    width: 50%;
+    flex-direction: column;
     height: 100vh;
     overflow: hidden;
 }
+
+.img-section {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
 
 .image {
     margin: auto;
@@ -24,41 +26,24 @@ body {
 
 .container {
     display: flex;
-    align-items: flex-start;
-    padding-top: 1.25rem;
-    padding-left: 3rem;
-    padding-right: 1rem;
-    padding-bottom: 1rem;
-    width: 50%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
     height: 100%;
 }
 
-@media (min-width: 640px) {
-    .sm\:px-6 {
-        padding-left: 1.5rem;
-        padding-right: 1.5rem;
-    }
-}
-
-@media (min-width: 1024px) {
-    .lg\:px-8 {
-        padding-left: 2rem;
-        padding-right: 2rem;
-    }
-}
 
 .second-container {
-    width: 380px;
-    margin-left: 1.5rem;
-    margin-bottom: 1.5rem;
-    margin-top: 0.1rem;
-    gap: 8px;
+   width: 100%;
+   padding: 5%;
+   height: 100%;
 }
 
 .home {
     display: flex;
     align-items: center;
     gap: 10px;
+
 }
 
 .home-image {
@@ -68,14 +53,12 @@ body {
 
 .back-home {
     color: #3880E2;
-    font-size: 0.75rem;
+    font-size: 1rem;
+    margin-left: 2%;
 }
 
-.third-container {
-    margin-top: 1.25rem;
-    margin-bottom: 1.25rem;
-    width: 85%;
-}
+
+
 
 a {
     text-decoration: none;
@@ -125,52 +108,37 @@ a:visited {
     font-weight: bold;
     text-align: center;
 }
-
-.form {
- padding-top: 0px;
-
+.form{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
-
 .form-div {
-    /* margin-top: 2px; */
-    border-radius: 0.375rem;
-    /* box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.05); */
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.email {
-    /* margin-top: 10px; */
+
+.email,.password {
     width: 100%;
-    
 }
 
 .email-address {
     color: #a9a9a9;
 }
 
-input[type="email"] {
- width: 100%;
-    padding: 0.5rem 0.75rem;
-    /* font-size: 1rem; */
-    /* line-height: 1.25; */
-    background-color: #fff;
-    /* border: 1px solid #d1d5da; */
-    box-sizing: border-box;
-    border-radius: 0.375rem;
-    margin-top: 10px;
-}
 
 .email-input {
-    position: relative;
     display: block;
-    width: 100%;
-    border-radius: 0.375rem;
-    border: 1px solid #A5A5A5;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    margin-top: 2px;
-    margin-bottom: 2px;
+        width: 100%;
+        border-radius: 0.375rem;
+        border: 1px solid #A5A5A5;
+        padding: 2vw 0.5vw;
+        margin-top: 2px;
+        margin-bottom: 2px;
 }
 
 .appearance-none {
@@ -185,7 +153,6 @@ input[type="email"] {
 }
 
 .email-input:focus {
-    z-index: 10;
     border-color: #A5A5A5;
     outline: none;
     box-shadow: 0 0 0 0.125rem #A5A5A5;
@@ -194,6 +161,8 @@ input[type="email"] {
 .password {
     margin-top: 1.5rem;
     margin-bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .password-div {
@@ -217,28 +186,17 @@ input[type="email"] {
 
 .section-password {
     width: 100%;
-    position: relative;
-    height: 39px;
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+
 }
 
 .password-input {
-    position: absolute;
-    z-index: 10;
     display: block;
-    appearance: none;
-    border-radius: 0.375rem;
-    border: 1px solid #A5A5A5;
-    padding-left: 0.75rem;
-    padding-right: 0.75rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    color: #a9a9a9;
-    left: 0%;
-    right: 0%;
-    margin-top: 10px;
+        width: 100%;
+        border-radius: 0.375rem;
+        border: 1px solid #A5A5A5;
+        padding: 2vw 0.5vw;
+        margin-top: 2px;
+        margin-bottom: 2px;
 }
 
 .password-input:focus {
@@ -279,4 +237,69 @@ input[type="email"] {
 
 .button:hover {
     background-color: #c6202f;
+}
+@media (min-width:600px) {
+    .third-container {
+        width: 60%;
+        height: 80%;
+    }
+
+    .form {
+        height: 60%;
+    }
+}
+
+@media (min-width:1200px) {
+    .section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .img-section {
+        width: 50%;
+        height: 100vh;
+    }
+
+    .container {
+        width: 50%;
+        height: 100%;
+    }
+
+    .second-container {
+        width: 60%;
+        padding: 2%;
+    }
+
+    .third-container {
+        width: 85%;
+        height: fit-content;
+    }
+    .email-input,.password-input{
+        padding: 1vw 0.5vw;
+    }
+}
+.register-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 30vw;
+    background-color: #c6202f;
+}
+.company,.register-form>div>span{
+    display: flex;
+    flex-direction: column;   
+}
+.register-form>div{
+    display: flex;
+    justify-content: space-between;
+}
+.register-form>div>span{
+    width: 45%;
+}
+.deptsMap{
+    background-color: #d7b321;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }

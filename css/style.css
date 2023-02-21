@@ -1,11 +1,11 @@
-/* 
-@tailwind base;
-@tailwind components;
-@tailwind utilities; */
 *{
     margin: 0;
     padding: 0;
 }
+
+/* @media screen and (max-width:600px) {
+    
+} */
 input{
     outline: #707070;
 }
@@ -64,96 +64,7 @@ input::-webkit-input-placeholder{
 .border-#7070701D{
     border-color: #7070701D;
 }
- /* .pagination > li > a, .pagination > li > span{background-color:red} */
- .pagination>li.active>a,
- .pagination>li.active>span {
-     background-color: transparent;
-     color: #D40E1F;
- }
 
- .pagination .page-item a.page-link {
-     border: none;
- }
-
- tr {
-     background-color: #D40E1F0D !important;
-     color: #D40E1F;
-     font-size: 1.1vw;
-     font-weight: medium;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 0 3%;
-     width: 100%;
- }
-
- .td {
-     background-color: white !important;
-     color: #8E8E8E;
-     display: flex;
-     justify-content: space-between;
-     align-items: center;
-     padding: 0 3%;
-     width: 100%;
-     border-bottom: 2px solid #7070701D;
-     font-size: 1.1vw;
-
- }
-
- .sn {
-    width: 15%;
-    border: none;
-}
-
-.r1-col {
-    width: 30%;
-    border: none;
-}
-
-.r2-col {
-    width: 30%;
-    border: none;
-}
-
-.r3-col {
-    width: 30%;
-    border: none;
-}
-
-.r4-col {
-    width: 30%;
-    border: none;
-    text-align: center;
-}
-.r5-col {
-   width: 35.5%;
-   border: none;
-}
-.r6-col {
-   width: 15%;
-   border: none;
-}
-
- select {
-     color: #8E8E8E;
-     height: 100%;
- }
-
- #example_info,
- #example_paginate {
-     text-align: center;
-     color: #8E8E8E;
- }
-
- .paginate_button>a {
-     /* background-color: #D40E1F0D!important; */
-     border: none;
-     color: #8E8E8E;
- }
-
- .paginate_button>a>.active {
-     color: #D40E1F;
- }
 
  /* upload staff */
 .uploadStaffModal,.modal-container {
@@ -958,18 +869,18 @@ input::-webkit-input-placeholder{
     font-weight: 700;
      border-radius: 0.75rem/* 12px */;
      font-size: 4.4vw;
-     margin-top: 3.3vw;
+     margin-top: 1vw !important;
      text-align: center;
 }
 
-.planDivbreakline{
-    margin-top: 3.3vw;
-    border: 1px solid #74747426;
-    width: 100;
-}
 .planDivCheckboxs{
-     margin-top: 3.3;
+     margin-top: 3.3vw;
      width: 70%;
+}
+.planDivbreakline{
+    margin-top: 2vw;
+    border: 0.5px solid rgb(218, 215, 215);
+    width: 80%;
 }
 
 .planDivCheckCircleDiv{
@@ -1059,13 +970,13 @@ input::-webkit-input-placeholder{
     display: flex;
 }
 .raisememoDiv {
-    width: 70vw;
+    width: 90vw;
     background-color: white;
     margin: 12vh 5% 0;
     display:flex;
     flex-direction: column;
     border: 1px solid #7070701D;
-    padding-bottom:2% ;
+    padding-bottom:30px ;
 }
 .raisememo{
 display: flex;
@@ -1084,46 +995,26 @@ font-weight: 700;
     flex-direction: column;
 }
 .raiseMemolabel{
-    margin-top: 2%;
+    margin-top: 20px;
     color: #A5A5A5;
     font-size: 16px;
 }
 
 
-@media screen and (min-width:1440px){
-    .raisememo > h1{
-font-size: 18px;
-}
-.raiseMemolabel{
-    font-size: 18px;
-}
-}
-
-.payment-success{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    height: 30%;
-    margin-bottom: 5%;
-    font-size: 1.3vw;
-    color: #A5A5A5;
-    font-weight: 600;
-}
-
 .raisememosubjectinput,.raisememouploadselect, .raisememouploadselect > option, .recipientselect{
-    margin-top: 1%;
-    width: 35%;
-    padding: 1.8%;
+    margin-top: 10px;
+    width: 50%;
+    padding: 10px;
     outline: none;
     border: 1px solid #E2E2E2;
     border-radius: 0.5vw;
 }
+
 .maintexttextarea {
-width: 80%;
+width: 90%;
 outline: none;
-padding: 2%;
-margin-top: 1%;
+padding: 10px;
+margin-top: 10px;
 border: 1px solid #E2E2E2;
 border-radius: 0.5vw;
 }
@@ -1133,10 +1024,10 @@ border-radius: 0.5vw;
 } 
 
 .raisememosubmit{
-    width: 25%;
     align-self: center;
-    margin-top: 1%;
-    padding: 1%;
+    margin-top: 10%;
+    padding: 15px;
+    width: 30%;
     border: none;
     color: white;
     background-color: #D7B321;
@@ -1149,4 +1040,61 @@ border-radius: 0.5vw;
 
 .raisememosubmit:hover {
     background-color: #C32131;
+}
+
+
+@media screen and (min-width:1024px) {
+    .raisememoDiv {
+    width: 70vw;
+     padding-bottom:2%;
+}
+.raiseMemolabel{
+    margin-top: 2%;
+    color: #A5A5A5;
+    font-size: 16px;
+}
+
+.raisememosubjectinput,.raisememouploadselect, .raisememouploadselect > option, .recipientselect{
+    margin-top: 1%;
+    width: 35%;
+    padding: 1.8%;
+    border-radius: 0.5vw;
+}
+
+
+.raisememosubmit{
+    width: 20%;
+    align-self: center;
+    margin-top: 1%;
+    padding: 1.5%;
+}
+
+  .maintexttextarea {
+padding: 2%;
+margin-top: 1%;
+}
+}
+
+@media screen and (min-width:1440px){
+    .raisememo > h1{
+font-size: 18px;
+}
+.raiseMemolabel{
+    font-size: 18px;
+}
+}
+
+
+
+
+.payment-success{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 30%;
+    margin-bottom: 5%;
+    font-size: 1.3vw;
+    color: #A5A5A5;
+    font-weight: 600;
 }

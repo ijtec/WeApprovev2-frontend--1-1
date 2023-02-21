@@ -12,60 +12,28 @@
         integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link href="../css/layout.css" rel="stylesheet">
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/tables.css">
     <title>Report</title>
-    <style>
-        .s_n{
-            width:5% !important;
-            text-align: center;
-            border-bottom: none !important;
-        }
-        .row1{
-            width: 13% !important;
-            text-align: start;
-             border-bottom: none !important;
-        }
-        .row2{
-            width: 18% !important;
-            text-align: start;
-             border-bottom: none !important;
-        }
-        .row3{
-            width: 20% !important;
-            text-align: start;
-             border-bottom: none !important;
-        }
-        .row4{
-            width: 10% !important;
-            text-align: start;
-             border-bottom: none !important;
-        }
-        .row5{
-            width: 5% !important;
-            text-align: center;
-            border-bottom: none !important;
-              text-decoration: underline ;
-             color: #334AFF;
-        }
-        .row6{
-            width: 5%;
-            text-align: center;
-             border-bottom: none !important;
-             text-decoration: underline ;
-             color: #334AFF;
-        }
-    </style>
+   
 </head>
 
 <body>
     <div>
-        <!-- navbar -->
         <div class='nav-container '>
             <div class='nav-list  '>
                 <img src="../assets/WeApprove black.png" class="logo ">
-                <div class='nav-links '>
+                <div class='nav-links'>
                     <div class='link  navitemsdiv '>
                         <i class="fa-solid fa-border-all "></i>
                         <a href="./dashboard.html" class='anchor '>Dashboard</a>
+                    </div>
+                    <div class='link  navitemsdiv '>
+                        <i class="fa-solid fa-border-all "></i>
+                        <a href="./processmemo.html" class='anchor '>Process Memo</a>
+                    </div>
+                    <div class='link  navitemsdiv'>
+                        <i class="fa-solid fa-border-all "></i>
+                        <a href="./raisememo.html" class='anchor '>Raise Memo</a>
                     </div>
                     <div
                         class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
@@ -95,48 +63,91 @@
                 </div>
             </div>
         </div>
-    </div>
-
-    <!-- Dropdown menu -->
-    <div class="dropdownDiv">
-        <div class="dropdown">
-            <div
-                class="visibledropdown flex px-1 items-center  w-full h-[3.1vw] border-[1px] border-[#EAAC2980] border-solid">
-                <img src="../assets/girl.jpg" alt="" srcset="" class="userImg">
-                <h1 class="userName vw1 font-medium text-[#707070]">Adeola Thompson</h1>
-                <!-- <i class="dropdown-toggle fa-solid fa-caret-down border-none "></i> -->
-
-                <span class="dropdown-toggle " style="background-color: transparent !important;"></span>
+        <!-- mobile nav bar -->
+        <div class="mobilenavlogodiv">
+            <i class="fa-solid fa-bars" onclick="toggleNav()"></i>
+            <img src="../assets/WeApprove black.png" class="mobilelogo ">
+        </div>
+        <div class='mobilenav-container'>
+            <div class='nav-list'>
+                <div class='nav-links '>
+                    <div class='link  navitemsdiv '>
+                        <i class="fa-solid fa-border-all "></i>
+                        <a href="./dashboard.html" class='anchor '>Dashboard</a>
+                    </div>
+                    <div class='link  navitemsdiv '>
+                        <i class="fa-solid fa-border-all "></i>
+                        <a href="./processmemo.html" class='anchor '>Process Memo</a>
+                    </div>
+                    <div class='link  navitemsdiv'>
+                        <i class="fa-solid fa-border-all "></i>
+                        <a href="./raisememo.html" class='anchor '>Raise Memo</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-user-tie text-[1.22vw]"></i>
+                        <a href="./managestaff.html" class='anchor ml-[8%]'>Manage Staff</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-suitcase text-[1.22vw]"></i>
+                        <a href="./Managedept.html" class='anchor ml-[8%]'>Manage Department</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-credit-card text-[1.22vw]"></i>
+                        <a href="./manageSubscription.html" class='anchor ml-[8%]'>Manage Subscription</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] hover:text-[#D40E1F] navitemsdiv font-medium w-full flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]'>
+                        <i class="fa-solid fa-file text-[1.22vw]"></i>
+                        <a href="./reports.html" class='anchor ml-[8%]'>Report</a>
+                    </div>
+                    <div
+                        class='link  text-[#707070] w-full hover:text-[#D40E1F] navitemsdiv font-medium flex items-center px-[5%] h-[8vh] rounded-[0.2vw] text-[0.9vw] mb-[3%]  '>
+                        <i class="fa-solid fa-arrow-right-from-bracket text-[1.22vw]"></i>
+                        <a href="" class='anchor ml-[8%]'>Log out</a>
+                    </div>
+                </div>
             </div>
-            <div class="dropdown-menu">
-                <a class="dropdown-item" data-value="1">
-                    <img src="../assets/briefcase-solid.png" alt="Image 1">
-                    Company Profile
-                </a>
-                <hr>
-                <a class="dropdown-item" data-value="2">
-                    <img src="../assets/key-solid.png" alt="Image 2">
-                    Change Profile
-                </a>
-                <hr>
-                <a class="dropdown-item" data-value="3">
-                    <img src="../assets/logout.png" alt="Image 3">
-                    Logout
-                </a>
+        </div>
+        </div>
+        
+        <!-- Dropdown menu -->
+        <div class="dropdownDiv">
+            <div class="dropdown">
+                <div
+                    class="visibledropdown flex px-1 items-center justify-between w-full h-[3.1vw] border-[1px] border-[#EAAC2980] border-solid">
+                    <img src="../assets/girl.jpg" alt="" srcset="" class="userImg">
+                    <h1 class="userName text-[1vw] font-medium text-[#707070]">Adeola Thompson</h1>
+                    <span class="dropdown-toggle " style="background-color: transparent !important;"></span>
+                    <!-- <span class="dropdown-toggle fa-solid fa-caret-down border-none"></span>  -->
+                </div>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" data-value="1" style="border-bottom:1px solid #D1D1D1;">
+                        <img src="../assets/briefcase-solid.png" alt="Image 1">
+                        Company Profile
+                    </a>
+        
+                    <a class="dropdown-item" data-value="2" style="border-bottom:1px solid #D1D1D1;">
+                        <img src="../assets/key-solid.png" alt="Image 2">
+                        Change Profile
+                    </a>
+        
+                    <a class="dropdown-item" data-value="3">
+                        <img src="../assets/logout.png" alt="Image 3">
+                        Logout
+                    </a>
+                </div>
             </div>
         </div>
     </div>
-    </div>
 
     <!-- table -->
-    <div class=" d-flex flex-column w-70 "
-        style="margin-top:6.2vw; border:solid 1px #7070701D;height: fit-content;margin-left: 4.6vw;background-color: white; ">
-
-        <div class="d-flex align-items-center justify-content-between bg-white px-2 font-weight-bold font-inter text-1.4vw"
-            style="height: 3vw ;padding-top: 2vw;">
-            <p class="vw1 d-flex justify-content-center align-items-center "
-                style="height: 100%;color: #D40E1F;font-weight: bold;margin-top: 1vw;">Reports</p>
-            <div class="d-flex align-items-center">
+    <div class=" table-container-general w-70 ">
+        <div class="table-control mngstaff">
+            <div class="p" style="margin-top: 0;">Reports</div>
+            <div  class="d-flex align-items-center">
                 <!-- <div>
                     <h1>Date</h1>
                     <input type="date" name="" id="">
@@ -149,129 +160,127 @@
                 </div> -->
             </div>
         </div>
-        <hr style="margin-top: 2vw;">
-
         <div class="table-responsive">
             <table data-ordering="false" id="example" class="table " style="width:100%; background-color: white;">
                 <thead>
                     <tr>
-                        <th class="s_n">S/N</th>
-                        <th class="row1">Memo #</th>
-                        <th class="row2">Department</th>
-                        <th class="row3">Staff</th>
-                        <th class="row4">Status</th>
-                        <th class="row5"></th>
-                        <th class="row6"></th>
+                        <th class="reports_s_n">S/N</th>
+                        <th class="reports_row1">Memo #</th>
+                        <th class="reports_row2">Department</th>
+                        <th class="reports_row3">Staff</th>
+                        <th class="reports_row4">Status</th>
+                        <th class="reports_row5"></th>
+                        <th class="reports_row6"></th>
                     </tr>
                 </thead>
                 <tbody class="pl-3">
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Approved</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Approved</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Approved</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Approved</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Rejected</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Rejected</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Rejected</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Rejected</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Rejected</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Rejected</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Rejected</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Rejected</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Rejected</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Rejected</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Rejected</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Rejected</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Rejected</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Rejected</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Rejected</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Rejected</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Approved</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Approved</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                     <tr class="td">
-                        <td class="s_n">1.</td>
-                        <td class="row1">302393939482</td>
-                        <td class="row2">Software Development</td>
-                        <td class="row3">Okechukwu Ezekiel Oriza</td>
-                        <td class="row4">Approved</td>
-                        <td class="row5"><a href="">View</a></td>
-                        <td class="row6"><a href="">Print</a></td>
+                        <td class="reports_s_n">1.</td>
+                        <td class="reports_row1">302393939482</td>
+                        <td class="reports_row2">Software Development</td>
+                        <td class="reports_row3">Okechukwu Ezekiel Oriza</td>
+                        <td class="reports_row4">Approved</td>
+                        <td class="reports_row5"><a href="">View</a></td>
+                        <td class="reports_row6"><a href="">Print</a></td>
                     </tr>
                 </tbody>
             </table>
@@ -296,7 +305,7 @@
     });
 
     // colors of text for the status rows
-     const rowFour = document.querySelectorAll('.row4');
+     const rowFour = document.querySelectorAll('.reports_row4');
       function statusColor () {
           rowFour.forEach(row => {
             console.log(row.innerHTML)
